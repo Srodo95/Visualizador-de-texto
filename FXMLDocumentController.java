@@ -53,7 +53,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void mostrarTexto(ActionEvent event) throws FileNotFoundException, IOException {
-        try (FileReader archivo = new FileReader(boton_Buscar.getText())) {
+        try (FileReader archivo = new FileReader(btf_archivoPrincipal.getText()) {
             int caracter;
             while((caracter = archivo.read()) != -1){
                 tf_textoArchivo.setText(String.valueOf(caracter));

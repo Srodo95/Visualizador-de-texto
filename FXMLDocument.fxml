@@ -21,7 +21,7 @@
             <TextField fx:id="tf_archivoPrincipal" prefHeight="36.0" prefWidth="340.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
-      <TextArea fx:id="tf_textoArchivo" layoutX="29.0" layoutY="147.0" prefHeight="157.0" prefWidth="468.0" />
+      <TextArea fx:id="tf_textoArchivo" layoutX="29.0" layoutY="147.0" prefHeight="157.0" prefWidth="468.0" wrapText="true" />
       <Button layoutX="29.0" layoutY="106.0" mnemonicParsing="false" onAction="#mostrarTexto" prefHeight="25.0" prefWidth="88.0" text="Mostrar" />
       <GridPane layoutX="19.0" layoutY="372.0" prefHeight="39.0" prefWidth="499.0">
         <columnConstraints>
@@ -38,5 +38,6 @@
       </GridPane>
       <Button layoutX="531.0" layoutY="440.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
       <Button layoutX="525.0" layoutY="379.0" mnemonicParsing="false" onAction="#copiarTexto" prefHeight="25.0" prefWidth="66.0" text="copiar" />
+      <Button layoutX="518.0" layoutY="147.0" mnemonicParsing="false" onAction="#limpiarTexto" prefHeight="39.0" prefWidth="74.0" text="Limpiar" />
    </children>
 </AnchorPane>

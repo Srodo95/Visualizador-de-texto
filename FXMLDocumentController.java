@@ -53,12 +53,25 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void mostrarTexto(ActionEvent event) throws FileNotFoundException, IOException {
-        try (FileReader archivo = new FileReader(btf_archivoPrincipal.getText()) {
-            int caracter;
-            while((caracter = archivo.read()) != -1){
-                tf_textoArchivo.setText(String.valueOf(caracter));
+        File file = new File(tf_archivoPrincipal.getText());
+        try (BufferedReader lector = new BufferedReader(new FileReader(file))) {
+            boolean eof = false;
+            String lineaLeida;
+            while (!eof) {
+                lineaLeida = lector.readLine();
+                if (lineaLeida != null) {
+                    System.out.println(lineaLeida);
+                    tf_textoArchivo.setText(lineaLeida);
+                }else {
+                    eof = true;
+                }
             }
         }
+    }
+    
+    @FXML
+    private void limpiarTexto(ActionEvent event){
+        tf_textoArchivo.clear();
     }
     
     @FXML

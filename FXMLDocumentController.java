@@ -75,23 +75,8 @@ public class FXMLDocumentController implements Initializable {
     }
     
     @FXML
-    private void copiarTexto(ActionEvent event) throws IOException{
-        File archivoDestino = new File(tf_archivoDestino.getText());
-        BufferedWriter escritor = new BufferedWriter(new FileWriter(archivoDestino));
-        File archivoPrincipal = new File(tf_archivoPrincipal.getText());
-        BufferedReader lector = new BufferedReader(new FileReader(archivoPrincipal));
-        String linea;
-        boolean eof = false;
-        while(!eof){
-            linea = lector.readLine();
-            if(linea != null){
-                escritor.write(linea);
-            }else{
-                eof = true;
-            }
-        }
-        lector.close();
-        escritor.close();
+    private void copiarTexto(ActionEvent event){
+        
     }
     
     @FXML
